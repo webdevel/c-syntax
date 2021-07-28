@@ -1,0 +1,29 @@
+{
+    "name": "c-syntax",
+    "displayName": "C Syntax",
+    "description": "C syntax highlighting for Visual Studio Code",
+    "version": "1.0.0",
+    "publisher": "webdevel",
+    "engines": {
+        "vscode": "^0.10.1"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "c",
+            "aliases": ["C", "c"],
+            "extensions": [".c",".h"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "c",
+            "scopeName": "source.c",
+            "path": "./syntaxes/c.tmLanguage.json",
+            "embeddedLanguages": {
+              "meta.embedded.assembly.c": "asm"
+            }
+        }]
+    }
+}
